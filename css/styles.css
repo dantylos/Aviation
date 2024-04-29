@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Kanit:wght@200;400;700&family=Lato&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Ubuntu:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  font-family: "Ubuntu";
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+}
+
+.ls-none {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+body {
+  background-color: #2f2f2f;
+}
+
+header {
+  padding: 12px 0;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header #head-icon {
+  max-width: 48px;
+}
+header #head-icon img {
+  display: block;
+  width: 100%;
+}
+header ul {
+  gap: 56px;
+}
+header ul li {
+  font-size: 18px;
+  color: #c1c1c1;
+  transition: 0.5s;
+}
+header ul li:hover {
+  color: #2bc920;
+  font-size: 22px;
+}
+
+/*# sourceMappingURL=styles.css.map */
