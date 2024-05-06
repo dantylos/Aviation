@@ -1,6 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Galada&family=Kanit:wght@200;400;700&family=Lato&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Ubuntu:wght@400;700&display=swap');
+@import url(accordion.css);
 
-$font: 'Ubuntu';
+@import url('https://fonts.googleapis.com/css2?family=Galada&family=Kanit:wght@200;400;700&family=Lato&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Ubuntu+Sans+Mono&family=Ubuntu:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Galada&family=Kanit:wght@200;400;700&family=Lato&family=Monoton&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Ubuntu+Sans+Mono&family=Ubuntu:wght@400;700&display=swap');
+
+$font: 'Ubuntu Sans Mono', monospace;
+$head_font: 'Monoton';
 
 //Basics
 
@@ -14,11 +19,10 @@ a{
 }
 :root{
   font-family: $font;
-  h1,h2,h3,h4,h5,h6,p,li{
-    color: rgb(227, 207, 182);
+  h1,h2,h3,h4,h5,h6,p,li,label{
     &::selection{
-      color: #56caf4;
-      background-color: #152845;
+      color: #37ce62;
+      background-color: #0c0c0d;
     }
   }
 }
@@ -41,7 +45,7 @@ a{
 
 body{
   background-color: #1e1e1e;
-  --boxSize: 17vw;
+  --boxSize: 17.5vw;
   #progress_plane{
     position: fixed;
     bottom: 0;
@@ -78,15 +82,16 @@ body{
 //Header
 
 header{
-  padding: 12px 0;
+  padding-top: 16px;
   height: 100vh;
   background-image: url(../images/plane1.jpg);
   background-size: cover;
   background-attachment: fixed;
+  position: relative;
   .container{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
   #head-icon{
     max-width: 48px;
@@ -96,35 +101,47 @@ header{
     }
   }
   ul{
-    gap: 56px;
+    gap: 72px;
     li{
       font-size: 18px;
-      color: #1637a3;
+      color: #8f63b5;
       transition: 0.5s;
+      letter-spacing: 2px;
       &:hover{
-        color: #b07cde;
-        font-size: 22px;
+        color: #1637a3;
+        text-decoration: underline;
+        letter-spacing: 5px;
       }
     }
   }
   h1{
-    margin-top: 72px;
-    color: #1637a3;
-    font-size: 42px;
+    color: #8f63b5;
+    font-size: 84px;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    line-height: 38px;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 600px);
+    font-family: $head_font;
+    text-shadow: 13px 12px 26px #8f63b5;
   }
+
 }
 
 
 //Main
 
-.main-banner{
-  padding: 32px 0 ;
+#main-banner{
+  padding: 62px 0 ;
   .container{
     display: flex;
     justify-content: space-between;
     h2{
       color: rgb(227, 207, 182);
-      font-size: 36px;
+      font-size: 48px;
+      line-height: 72px;
+      letter-spacing: 5px;
       max-width: 420px;
     }
     .types{
@@ -135,16 +152,19 @@ header{
         max-width: 220px;
         position: relative;
         transition: 0.5s;
+        height: 100%;
         &:hover{
           transform: scale(110%);
         }
         p{
           position: absolute;
-          top: calc(50% - 12px);
-          left: calc(50% - 24px);
+          bottom: 0;
+          right: 0;
           color: rgb(227, 207, 182);
-          background-color: #152845;
-          border-radius: 12px;
+          letter-spacing: 1.4px;
+          font-size: 16px;
+          background-color: #131313;
+          border-radius: 12px 0 12px 0;
           padding: 6px;
         }
         img{
@@ -154,6 +174,63 @@ header{
           border-radius: 20px;
         }
       }
+    }
+  }
+}
+
+.history{
+  padding: 72px 0 56px;
+  .container{
+    h2{
+      color: #b07cde;
+      text-align: center;
+      margin-bottom: 46px;
+      font-size: 36px;
+      letter-spacing: 3px;
+    }
+    .history-blocks{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      article{
+        max-width: 560px;
+        width: -webkit-fill-available;
+        background-size: cover;
+        height: 380px;
+        padding: 16px;
+        border-radius: 12px;
+        background-size: 110%;
+        transition: 0.8s;
+        background-position: center;
+        &:hover{
+          background-size: 100%;
+          background-position: top;
+        }
+        p{
+          width: 80%;
+          color: #b07cde;
+          padding: 12px;
+          background-color: #000;
+          border-radius: 20px;
+          opacity: 0.7;
+          &:hover{
+          width: 100%;
+          }
+        }
+      }
+        .bg-1{
+          background-image: url(../images/wright.jpeg);
+        }
+        .bg-2{
+          background-image: url(../images/paris_fair.jpeg);
+        }
+        .bg-3{
+          background-image: url(../images/bleriot.jpeg);
+        }
+        .bg-4{
+          background-image: url(../images/freight1921.jpeg);
+        }
     }
   }
 }

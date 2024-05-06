@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Galada&family=Kanit:wght@200;400;700&family=Lato&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Ubuntu:wght@400;700&display=swap");
+@import url(accordion.css);
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Kanit:wght@200;400;700&family=Lato&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Ubuntu+Sans+Mono&family=Ubuntu:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Kanit:wght@200;400;700&family=Lato&family=Monoton&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Ubuntu+Sans+Mono&family=Ubuntu:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -10,14 +12,11 @@ a {
 }
 
 :root {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu Sans Mono", monospace;
 }
-:root h1, :root h2, :root h3, :root h4, :root h5, :root h6, :root p, :root li {
-  color: rgb(227, 207, 182);
-}
-:root h1::selection, :root h2::selection, :root h3::selection, :root h4::selection, :root h5::selection, :root h6::selection, :root p::selection, :root li::selection {
-  color: #56caf4;
-  background-color: #152845;
+:root h1::selection, :root h2::selection, :root h3::selection, :root h4::selection, :root h5::selection, :root h6::selection, :root p::selection, :root li::selection, :root label::selection {
+  color: #37ce62;
+  background-color: #0c0c0d;
 }
 
 .container {
@@ -35,7 +34,7 @@ a {
 
 body {
   background-color: #1e1e1e;
-  --boxSize: 17vw;
+  --boxSize: 17.5vw;
 }
 body #progress_plane {
   position: fixed;
@@ -69,16 +68,17 @@ body #progress_plane img {
   }
 }
 header {
-  padding: 12px 0;
+  padding-top: 16px;
   height: 100vh;
   background-image: url(../images/plane1.jpg);
   background-size: cover;
   background-attachment: fixed;
+  position: relative;
 }
 header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 header #head-icon {
   max-width: 48px;
@@ -88,62 +88,131 @@ header #head-icon img {
   width: 100%;
 }
 header ul {
-  gap: 56px;
+  gap: 72px;
 }
 header ul li {
   font-size: 18px;
-  color: #1637a3;
+  color: #8f63b5;
   transition: 0.5s;
+  letter-spacing: 2px;
 }
 header ul li:hover {
-  color: #b07cde;
-  font-size: 22px;
+  color: #1637a3;
+  text-decoration: underline;
+  letter-spacing: 5px;
 }
 header h1 {
-  margin-top: 72px;
-  color: #1637a3;
-  font-size: 42px;
+  color: #8f63b5;
+  font-size: 84px;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  line-height: 38px;
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 600px);
+  font-family: "Monoton";
+  text-shadow: 13px 12px 26px #8f63b5;
 }
 
-.main-banner {
-  padding: 32px 0;
+#main-banner {
+  padding: 62px 0;
 }
-.main-banner .container {
+#main-banner .container {
   display: flex;
   justify-content: space-between;
 }
-.main-banner .container h2 {
+#main-banner .container h2 {
   color: rgb(227, 207, 182);
-  font-size: 36px;
+  font-size: 48px;
+  line-height: 72px;
+  letter-spacing: 5px;
   max-width: 420px;
 }
-.main-banner .container .types {
+#main-banner .container .types {
   display: flex;
   justify-content: space-between;
   gap: 24px;
 }
-.main-banner .container .types .type-img {
+#main-banner .container .types .type-img {
   max-width: 220px;
   position: relative;
   transition: 0.5s;
+  height: 100%;
 }
-.main-banner .container .types .type-img:hover {
+#main-banner .container .types .type-img:hover {
   transform: scale(110%);
 }
-.main-banner .container .types .type-img p {
+#main-banner .container .types .type-img p {
   position: absolute;
-  top: calc(50% - 12px);
-  left: calc(50% - 24px);
+  bottom: 0;
+  right: 0;
   color: rgb(227, 207, 182);
-  background-color: #152845;
-  border-radius: 12px;
+  letter-spacing: 1.4px;
+  font-size: 16px;
+  background-color: #131313;
+  border-radius: 12px 0 12px 0;
   padding: 6px;
 }
-.main-banner .container .types .type-img img {
+#main-banner .container .types .type-img img {
   width: 100%;
   height: 100%;
   display: block;
   border-radius: 20px;
+}
+
+.history {
+  padding: 72px 0 56px;
+}
+.history .container h2 {
+  color: #b07cde;
+  text-align: center;
+  margin-bottom: 46px;
+  font-size: 36px;
+  letter-spacing: 3px;
+}
+.history .container .history-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+.history .container .history-blocks article {
+  max-width: 560px;
+  width: -webkit-fill-available;
+  background-size: cover;
+  height: 380px;
+  padding: 16px;
+  border-radius: 12px;
+  background-size: 110%;
+  transition: 0.8s;
+  background-position: center;
+}
+.history .container .history-blocks article:hover {
+  background-size: 100%;
+  background-position: top;
+}
+.history .container .history-blocks article p {
+  width: 80%;
+  color: #b07cde;
+  padding: 12px;
+  background-color: #000;
+  border-radius: 20px;
+  opacity: 0.7;
+}
+.history .container .history-blocks article p:hover {
+  width: 100%;
+}
+.history .container .history-blocks .bg-1 {
+  background-image: url(../images/wright.jpeg);
+}
+.history .container .history-blocks .bg-2 {
+  background-image: url(../images/paris_fair.jpeg);
+}
+.history .container .history-blocks .bg-3 {
+  background-image: url(../images/bleriot.jpeg);
+}
+.history .container .history-blocks .bg-4 {
+  background-image: url(../images/freight1921.jpeg);
 }
 
 /*# sourceMappingURL=styles.css.map */
