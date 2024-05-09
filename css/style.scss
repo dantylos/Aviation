@@ -1,10 +1,13 @@
 @import url(accordion.css);
+@import url(media.css);
 
 @import url('https://fonts.googleapis.com/css2?family=Galada&family=Kanit:wght@200;400;700&family=Lato&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Ubuntu+Sans+Mono&family=Ubuntu:wght@400;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Galada&family=Kanit:wght@200;400;700&family=Lato&family=Monoton&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Ubuntu+Sans+Mono&family=Ubuntu:wght@400;700&display=swap');
 
 $font: 'Ubuntu Sans Mono', monospace;
+$purple: #8f63b5;
+$cream: rgb(227, 207, 182);
 $head_font: 'Monoton';
 
 //Basics
@@ -87,6 +90,7 @@ header{
   background-image: url(../images/plane1.jpg);
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
   position: relative;
   .container{
     display: flex;
@@ -104,7 +108,7 @@ header{
     gap: 72px;
     li{
       font-size: 18px;
-      color: #8f63b5;
+      color: $purple;
       transition: 0.5s;
       letter-spacing: 2px;
       &:hover{
@@ -115,18 +119,16 @@ header{
     }
   }
   h1{
-    color: #8f63b5;
-    font-size: 84px;
+    color: $cream;
+    font-size: min(6vw, 84px);
     letter-spacing: 3px;
     word-spacing: 5px;
-    line-height: 38px;
-    position: absolute;
-    top: 50%;
-    left: calc(50% - 600px);
+    text-align: center;
     font-family: $head_font;
-    text-shadow: 13px 12px 26px #8f63b5;
+    text-shadow: 13px 12px 26px $purple;
+    position: relative;
+    top: 34vh;
   }
-
 }
 
 
@@ -138,7 +140,7 @@ header{
     display: flex;
     justify-content: space-between;
     h2{
-      color: rgb(227, 207, 182);
+      color: $cream;
       font-size: 48px;
       line-height: 72px;
       letter-spacing: 5px;
@@ -160,7 +162,7 @@ header{
           position: absolute;
           bottom: 0;
           right: 0;
-          color: rgb(227, 207, 182);
+          color: $cream;
           letter-spacing: 1.4px;
           font-size: 16px;
           background-color: #131313;
@@ -182,7 +184,7 @@ header{
   padding: 72px 0 56px;
   .container{
     h2{
-      color: #b07cde;
+      color: $cream;
       text-align: center;
       margin-bottom: 46px;
       font-size: 36px;
@@ -209,7 +211,7 @@ header{
         }
         p{
           width: 80%;
-          color: #b07cde;
+          color: $purple;
           padding: 12px;
           background-color: #000;
           border-radius: 20px;
@@ -231,6 +233,47 @@ header{
         .bg-4{
           background-image: url(../images/freight1921.jpeg);
         }
+    }
+  }
+}
+
+#commertial-av{
+  background-image: url(../images/mau.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  padding: 24px 0;
+  .container{
+    h3{
+      color: $cream;
+    }
+  }
+}
+
+#military-av{
+  margin: 12px 0;
+  background-image: url(../images/Military.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  padding: 24px 0;
+  .container{
+    h3{
+      color: $cream;
+    }
+  }
+}
+
+#general-av{
+  margin: 12px 0;
+  background-image: url(../images/general.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  padding: 24px 0;
+  .container{
+    h3{
+      color: $cream;
     }
   }
 }
