@@ -161,8 +161,7 @@ header a:hover {
   font-size: 48px;
   line-height: 72px;
   letter-spacing: 5px;
-  max-width: 420px;
-  text-shadow: 2px 10px 10px #8f63b5;;
+  text-shadow: 2px 10px 10px #8f63b5;
 }
 #main-banner .container .types {
   display: flex;
@@ -322,13 +321,13 @@ header a:hover {
 }
 
 .future{
-  padding: 56px 0;
+  padding: 64px 0;
 }
 .future .container{
   justify-content: space-around;
 }
 .concept-img{
-  max-width: 560px;
+  max-width: 500px;
 }
  .concept-img img{
   width: 100%;
@@ -343,6 +342,7 @@ header a:hover {
   color: rgb(227, 207, 182);
   margin-top: 16px;
   font-size: 18px;
+  margin-left: 12px;
 }
 
 
