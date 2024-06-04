@@ -263,11 +263,12 @@ header a:hover {
   justify-content: space-around;
 }
 .type-wrap{
-  background-color: #111;
+  background-color: #272727;
   opacity: 0.6;
   border-radius: 12px;
   padding: 32px 16px;
 }
+
 #commertial-av .container h3 {
   color: rgb(227, 207, 182);
   margin-bottom: 36px;
@@ -337,6 +338,7 @@ header a:hover {
 .future-info h3{
   color: rgb(227, 207, 182);
   font-size: 34px;
+  text-shadow:  6px 10px 8px #8f63b5;
 }
 .future-info li{
   color: rgb(227, 207, 182);
@@ -353,14 +355,12 @@ header a:hover {
   max-width: 1200px;
 }
 .ref .refblock{
-  padding: 12px;
-  background-color: #0c0c0d;
-  opacity: 0.8;
-  border-radius: 20px;
-  margin-top: 42px;
+  margin-top: 62px;
 }
-.ref .refblock p{
-  color: rgb(227, 207, 182);
+.ref .refblock a{
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(141, 24, 141);
 }
 
 
